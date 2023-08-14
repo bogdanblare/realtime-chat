@@ -3,7 +3,7 @@ schema
     providers: [
       { type: jwt, issuer: "nextauth", secret: "{{ env.NEXTAUTH_SECRET }}" }
     ]
-    rules: [{ allow: private }]`
+    rules: [{ allow: public }]`
   ) {
   query: Query
 }
