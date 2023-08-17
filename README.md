@@ -1,7 +1,7 @@
-## Real-time chat 
+## 🚀 Real-time chat 
 Real-time chat is everywhere. It has many benefits including greater productivity, engagement, and efficient collaboration.
 
-## Screenshots
+## 📸 Screenshots
 
 ![App Screenshot](https://github.com/bogdanblare/realtime-chat/blob/main/Screenshot-realtime-chat.png)
 
