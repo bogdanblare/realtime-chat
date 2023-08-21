@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.9",
+    "@apollo/client": "^3.8.1",
     "@grafbase/apollo-link": "^1.1.0",
     "@types/node": "^18.14.5",
     "@types/react": "^18.0.28",
