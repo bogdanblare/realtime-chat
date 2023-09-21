@@ -1,7 +1,6 @@
 import { gql, useMutation } from "@apollo/client";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
-import useSound from "use-sound";
 
 const AddNewMessageMutation = gql`
   mutation AddNewMessage($username: String!, $avatar: URL, $body: String!) {
@@ -17,11 +16,8 @@ const AddNewMessageMutation = gql`
 
 export const NewMessageForm = () => {
   const { data: session } = useSession();
-  const [play] = useSound("sent.wav");
   const [body, setBody] = useState("");
-  const [addNewMessage] = useMutation(AddNewMessageMutation, {
-    onCompleted: () => play(),
-  });
+  const [addNewMessage] = useMutation(AddNewMessageMutation);
 
   return (
     <form
@@ -39,8 +35,7 @@ export const NewMessageForm = () => {
           setBody("");
         }
       }}
-      className="flex items-center space-x-3"
-    >
+      className="flex items-center space-x-3">
       <input
         autoFocus
         id="message"
@@ -53,8 +48,7 @@ export const NewMessageForm = () => {
       <button
         type="submit"
         className="bg-[#222226] rounded h-12 font-medium text-white w-24 text-lg border border-transparent hover:bg-[#363739] transition"
-        disabled={!body || !session}
-      >
+        disabled={!body || !session}>
         Send
       </button>
     </form>
